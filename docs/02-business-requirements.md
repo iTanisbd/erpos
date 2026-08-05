@@ -1,5 +1,5 @@
 # GSMOS
-## GSM Repair Operating System
+## ERPOS  Operating System
 
 Version: v0.1.0
 Status: Planning
@@ -12,7 +12,7 @@ Frontend: Blade + Bootstrap 5
 
 # Project Overview
 
-GSMOS (GSM Repair Operating System) is a complete Repair Shop Management System designed for GSM service centers.
+GSMOS (ERP Operating System) is a complete Repair Shop Management System designed for GSM service centers.
 
 The system helps repair shops efficiently manage customers, repair jobs, technicians, payments, inventory, spare parts, reports, and business operations from a single dashboard.
 
@@ -38,7 +38,7 @@ The software is designed to be scalable, secure, and production-ready.
 
 # Target Users
 
-- GSM Repair Shop
+- ERPOS  Shop
 - Mobile Service Center
 - Mobile Technician
 - Repair Business Owner
@@ -97,7 +97,7 @@ Version Control
 
 # Project Vision
 
-Create a professional GSM Repair Management System that can be used by repair shops across Bangladesh and later be transformed into a SaaS platform.
+Create a professional ERPOS  Management System that can be used by repair shops across Bangladesh and later be transformed into a SaaS platform.
 
 ---
 
