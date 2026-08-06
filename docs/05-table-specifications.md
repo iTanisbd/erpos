@@ -8,48 +8,26 @@ Author: Md. Anisur Rahman
 
 ---
 
-# Table: roles
+# Customers Table
 
-## Purpose
+Table Name: customers
 
-Stores all user roles used throughout the system.
+Purpose:
 
-Examples:
-
-- Owner
-- Admin
-- Receptionist
-- Technician
-- Cashier
+Stores customer information for repair tickets and future business records.
 
 ---
 
-## Columns
-
-| Column | Type | Nullable | Unique | Description |
-|---------|------|----------|--------|-------------|
-| id | BIGINT | No | Yes (PK) | Primary Key |
-| name | VARCHAR(100) | No | Yes | Role name |
-| slug | VARCHAR(100) | No | Yes | System identifier |
-| description | TEXT | Yes | No | Role description |
-| status | BOOLEAN | No | No | Active / Inactive |
-| created_at | TIMESTAMP | No | No | Created time |
-| updated_at | TIMESTAMP | No | No | Updated time |
-
----
-
-## Default Roles
-
-- Owner
-- Admin
-- Receptionist
-- Technician
-- Cashier
-
----
-
-## Notes
-
-- Role names must be unique.
-- Slug will be used internally.
-- A role can be assigned to multiple users.
+| Column | Type | Nullable | Default | Description |
+|---------|------|----------|----------|-------------|
+| id | bigint | No | Auto Increment | Primary Key |
+| customer_id | string | No | - | Business Customer ID (CUS-000001) |
+| name | string | No | - | Customer Name |
+| phone | string(20) | No | - | Mobile Number |
+| email | string | Yes | NULL | Email Address |
+| address | text | Yes | NULL | Customer Address |
+| notes | text | Yes | NULL | Internal Notes |
+| status | boolean | No | true | Active / Inactive |
+| created_at | timestamp | No | Current | Record Created Time |
+| updated_at | timestamp | No | Current | Record Updated Time |
+| deleted_at | timestamp | Yes | NULL | Soft Delete |
