@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-class Brand extends Model
+class DeviceModel extends Model
 {
     use HasFactory, SoftDeletes;
 
@@ -14,6 +14,7 @@ class Brand extends Model
      * The attributes that are mass assignable.
      */
     protected $fillable = [
+        'brand_id',
         'name',
         'slug',
         'description',
@@ -29,18 +30,10 @@ class Brand extends Model
     ];
 
     /**
-     * Device types supported by this brand.
+     * Brand of this device model.
      */
-    public function deviceTypes()
+    public function brand()
     {
-        return $this->belongsToMany(DeviceType::class);
-    }
-
-    /**
-     * Device models under this brand.
-     */
-    public function deviceModels()
-    {
-        return $this->hasMany(DeviceModel::class);
+        return $this->belongsTo(Brand::class);
     }
 }
