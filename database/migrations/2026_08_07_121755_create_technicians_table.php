@@ -12,8 +12,31 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('technicians', function (Blueprint $table) {
+
             $table->id();
+
+            $table->string('code')->unique();
+
+            $table->string('name');
+
+            $table->string('phone')->nullable();
+
+            $table->string('email')->nullable();
+
+            $table->string('designation')->nullable();
+
+            $table->text('address')->nullable();
+
+            $table->text('notes')->nullable();
+
+            $table->boolean('status')->default(true);
+
+            $table->unsignedInteger('sort_order')->default(0);
+
             $table->timestamps();
+
+            $table->softDeletes();
+
         });
     }
 

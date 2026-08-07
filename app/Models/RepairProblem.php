@@ -38,4 +38,12 @@ class RepairProblem extends Model
     {
         return $this->belongsTo(DeviceType::class);
     }
+
+    /**
+     * Repair ticket items using this repair problem.
+     */
+    public function repairTicketItems()
+    {
+        return $this->hasMany(RepairTicketItem::class);
+    }
 }

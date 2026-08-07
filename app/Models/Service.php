@@ -53,4 +53,12 @@ class Service extends Model
     {
         return $this->belongsToMany(RepairProblem::class);
     }
+
+    /**
+     * Repair ticket items using this service.
+     */
+    public function repairTicketItems()
+    {
+        return $this->hasMany(RepairTicketItem::class);
+    }
 }
