@@ -19,59 +19,439 @@ class ServiceSeeder extends Seeder
 
             'Hardware Service' => [
 
-                ['name' => 'Display Replacement',       'price' => 1500, 'minutes' => 60, 'parts' => true],
-                ['name' => 'Battery Replacement',       'price' => 800,  'minutes' => 30, 'parts' => true],
-                ['name' => 'Charging Port Replacement', 'price' => 700,  'minutes' => 45, 'parts' => true],
-                ['name' => 'Speaker Replacement',       'price' => 600,  'minutes' => 30, 'parts' => true],
-                ['name' => 'Microphone Replacement',    'price' => 600,  'minutes' => 30, 'parts' => true],
-                ['name' => 'Camera Replacement',        'price' => 1200, 'minutes' => 45, 'parts' => true],
-                ['name' => 'Back Glass Replacement',    'price' => 1000, 'minutes' => 60, 'parts' => true],
-                ['name' => 'Power Button Repair',       'price' => 500,  'minutes' => 30, 'parts' => true],
-                ['name' => 'Volume Button Repair',      'price' => 500,  'minutes' => 30, 'parts' => true],
-                ['name' => 'Motherboard Repair',        'price' => 3000, 'minutes' => 180,'parts' => true],
+                [
+                    'name' => 'Display Replacement',
+                    'description' => 'Replace damaged LCD/OLED display.',
+                    'default_price' => 1500,
+                    'minimum_price' => 1200,
+                    'estimated_minutes' => 60,
+                    'requires_parts' => true,
+                    'warranty_enabled' => true,
+                    'warranty_days' => 30,
+                ],
+
+                [
+                    'name' => 'Touch Glass Replacement',
+                    'description' => 'Replace damaged touch glass.',
+                    'default_price' => 1200,
+                    'minimum_price' => 900,
+                    'estimated_minutes' => 60,
+                    'requires_parts' => true,
+                    'warranty_enabled' => true,
+                    'warranty_days' => 30,
+                ],
+
+                [
+                    'name' => 'Battery Replacement',
+                    'description' => 'Replace damaged battery.',
+                    'default_price' => 800,
+                    'minimum_price' => 600,
+                    'estimated_minutes' => 30,
+                    'requires_parts' => true,
+                    'warranty_enabled' => true,
+                    'warranty_days' => 30,
+                ],
+
+                [
+                    'name' => 'Charging Port Replacement',
+                    'description' => 'Replace charging connector.',
+                    'default_price' => 700,
+                    'minimum_price' => 500,
+                    'estimated_minutes' => 45,
+                    'requires_parts' => true,
+                    'warranty_enabled' => true,
+                    'warranty_days' => 30,
+                ],
+
+                [
+                    'name' => 'Speaker Replacement',
+                    'description' => 'Replace loudspeaker.',
+                    'default_price' => 600,
+                    'minimum_price' => 450,
+                    'estimated_minutes' => 30,
+                    'requires_parts' => true,
+                    'warranty_enabled' => true,
+                    'warranty_days' => 30,
+                ],
+
+                [
+                    'name' => 'Microphone Replacement',
+                    'description' => 'Replace microphone.',
+                    'default_price' => 600,
+                    'minimum_price' => 450,
+                    'estimated_minutes' => 30,
+                    'requires_parts' => true,
+                    'warranty_enabled' => true,
+                    'warranty_days' => 30,
+                ],
+
+                [
+                    'name' => 'Camera Replacement',
+                    'description' => 'Replace front or rear camera.',
+                    'default_price' => 1200,
+                    'minimum_price' => 900,
+                    'estimated_minutes' => 45,
+                    'requires_parts' => true,
+                    'warranty_enabled' => true,
+                    'warranty_days' => 30,
+                ],
+
+                [
+                    'name' => 'Back Glass Replacement',
+                    'description' => 'Replace damaged back glass.',
+                    'default_price' => 1000,
+                    'minimum_price' => 800,
+                    'estimated_minutes' => 60,
+                    'requires_parts' => true,
+                    'warranty_enabled' => true,
+                    'warranty_days' => 30,
+                ],
+
+                [
+                    'name' => 'Power Button Repair',
+                    'description' => 'Repair power button.',
+                    'default_price' => 500,
+                    'minimum_price' => 350,
+                    'estimated_minutes' => 30,
+                    'requires_parts' => true,
+                    'warranty_enabled' => true,
+                    'warranty_days' => 15,
+                ],
+
+                [
+                    'name' => 'Volume Button Repair',
+                    'description' => 'Repair volume button.',
+                    'default_price' => 500,
+                    'minimum_price' => 350,
+                    'estimated_minutes' => 30,
+                    'requires_parts' => true,
+                    'warranty_enabled' => true,
+                    'warranty_days' => 15,
+                ],
+
+                [
+                    'name' => 'Motherboard Repair',
+                    'description' => 'Repair motherboard circuit.',
+                    'default_price' => 3000,
+                    'minimum_price' => 1800,
+                    'estimated_minutes' => 180,
+                    'requires_parts' => true,
+                    'warranty_enabled' => true,
+                    'warranty_days' => 30,
+                ],
+
+                [
+                    'name' => 'IC Replacement',
+                    'description' => 'Replace faulty IC.',
+                    'default_price' => 1800,
+                    'minimum_price' => 1200,
+                    'estimated_minutes' => 90,
+                    'requires_parts' => true,
+                    'warranty_enabled' => true,
+                    'warranty_days' => 30,
+                ],
+
+                [
+                    'name' => 'CPU Reball',
+                    'description' => 'CPU reballing service.',
+                    'default_price' => 3500,
+                    'minimum_price' => 2500,
+                    'estimated_minutes' => 240,
+                    'requires_parts' => false,
+                    'warranty_enabled' => true,
+                    'warranty_days' => 30,
+                ],
+
+                [
+                    'name' => 'Fingerprint Repair',
+                    'description' => 'Repair fingerprint sensor.',
+                    'default_price' => 1200,
+                    'minimum_price' => 900,
+                    'estimated_minutes' => 45,
+                    'requires_parts' => true,
+                    'warranty_enabled' => true,
+                    'warranty_days' => 30,
+                ],
+
+                [
+                    'name' => 'Face ID Repair',
+                    'description' => 'Repair Face ID module.',
+                    'default_price' => 3500,
+                    'minimum_price' => 2500,
+                    'estimated_minutes' => 120,
+                    'requires_parts' => true,
+                    'warranty_enabled' => true,
+                    'warranty_days' => 30,
+                ],
 
             ],
 
             'Software Service' => [
 
-                ['name' => 'Firmware Flash',            'price' => 500,  'minutes' => 30, 'parts' => false],
-                ['name' => 'Android Flash',             'price' => 600,  'minutes' => 30, 'parts' => false],
-                ['name' => 'Software Update',           'price' => 300,  'minutes' => 20, 'parts' => false],
-                ['name' => 'Data Backup',               'price' => 400,  'minutes' => 20, 'parts' => false],
-                ['name' => 'Data Recovery',             'price' => 1500, 'minutes' => 90, 'parts' => false],
-                ['name' => 'Bootloader Unlock',         'price' => 800,  'minutes' => 30, 'parts' => false],
-                ['name' => 'Root Service',              'price' => 500,  'minutes' => 25, 'parts' => false],
-                ['name' => 'Software Optimization',     'price' => 300,  'minutes' => 20, 'parts' => false],
+                [
+                    'name' => 'Firmware Flash',
+                    'description' => 'Install or reflash official firmware.',
+                    'default_price' => 500,
+                    'minimum_price' => 350,
+                    'estimated_minutes' => 30,
+                    'requires_parts' => false,
+                    'warranty_enabled' => false,
+                    'warranty_days' => 0,
+                ],
+
+                [
+                    'name' => 'Android Flash',
+                    'description' => 'Flash Android firmware.',
+                    'default_price' => 600,
+                    'minimum_price' => 400,
+                    'estimated_minutes' => 30,
+                    'requires_parts' => false,
+                    'warranty_enabled' => false,
+                    'warranty_days' => 0,
+                ],
+
+                [
+                    'name' => 'Software Update',
+                    'description' => 'Update device operating system.',
+                    'default_price' => 300,
+                    'minimum_price' => 200,
+                    'estimated_minutes' => 20,
+                    'requires_parts' => false,
+                    'warranty_enabled' => false,
+                    'warranty_days' => 0,
+                ],
+
+                [
+                    'name' => 'Data Backup',
+                    'description' => 'Backup customer data safely.',
+                    'default_price' => 400,
+                    'minimum_price' => 250,
+                    'estimated_minutes' => 20,
+                    'requires_parts' => false,
+                    'warranty_enabled' => false,
+                    'warranty_days' => 0,
+                ],
+
+                [
+                    'name' => 'Data Recovery',
+                    'description' => 'Recover deleted or inaccessible data.',
+                    'default_price' => 1500,
+                    'minimum_price' => 1000,
+                    'estimated_minutes' => 90,
+                    'requires_parts' => false,
+                    'warranty_enabled' => false,
+                    'warranty_days' => 0,
+                ],
+
+                [
+                    'name' => 'Bootloader Unlock',
+                    'description' => 'Unlock device bootloader.',
+                    'default_price' => 800,
+                    'minimum_price' => 600,
+                    'estimated_minutes' => 30,
+                    'requires_parts' => false,
+                    'warranty_enabled' => false,
+                    'warranty_days' => 0,
+                ],
+
+                [
+                    'name' => 'Root Service',
+                    'description' => 'Root Android device.',
+                    'default_price' => 500,
+                    'minimum_price' => 350,
+                    'estimated_minutes' => 25,
+                    'requires_parts' => false,
+                    'warranty_enabled' => false,
+                    'warranty_days' => 0,
+                ],
+
+                [
+                    'name' => 'Software Optimization',
+                    'description' => 'Optimize device performance.',
+                    'default_price' => 300,
+                    'minimum_price' => 200,
+                    'estimated_minutes' => 20,
+                    'requires_parts' => false,
+                    'warranty_enabled' => false,
+                    'warranty_days' => 0,
+                ],
 
             ],
 
             'Unlock Service' => [
 
-                ['name' => 'FRP Unlock',                'price' => 700,  'minutes' => 30, 'parts' => false],
-                ['name' => 'FRP Permanent Unlock',      'price' => 1500, 'minutes' => 60, 'parts' => false],
-                ['name' => 'Mi Account Unlock',         'price' => 1200, 'minutes' => 45, 'parts' => false],
-                ['name' => 'Mi Account Permanent',      'price' => 2500, 'minutes' => 60, 'parts' => false],
-                ['name' => 'Samsung KG Unlock',         'price' => 1500, 'minutes' => 45, 'parts' => false],
-                ['name' => 'MDM Unlock',                'price' => 1200, 'minutes' => 45, 'parts' => false],
-                ['name' => 'Network Unlock',            'price' => 1000, 'minutes' => 45, 'parts' => false],
-                ['name' => 'iCloud Bypass',             'price' => 3000, 'minutes' => 90, 'parts' => false],
+                [
+                    'name' => 'FRP Unlock',
+                    'description' => 'Remove Google Factory Reset Protection.',
+                    'default_price' => 700,
+                    'minimum_price' => 500,
+                    'estimated_minutes' => 30,
+                    'requires_parts' => false,
+                    'warranty_enabled' => false,
+                    'warranty_days' => 0,
+                ],
+
+                [
+                    'name' => 'FRP Permanent Unlock',
+                    'description' => 'Permanent FRP removal.',
+                    'default_price' => 1500,
+                    'minimum_price' => 1200,
+                    'estimated_minutes' => 60,
+                    'requires_parts' => false,
+                    'warranty_enabled' => false,
+                    'warranty_days' => 0,
+                ],
+
+                [
+                    'name' => 'Mi Account Unlock',
+                    'description' => 'Remove Xiaomi account lock.',
+                    'default_price' => 1200,
+                    'minimum_price' => 900,
+                    'estimated_minutes' => 45,
+                    'requires_parts' => false,
+                    'warranty_enabled' => false,
+                    'warranty_days' => 0,
+                ],
+
+                [
+                    'name' => 'Mi Account Permanent',
+                    'description' => 'Permanent Xiaomi account removal.',
+                    'default_price' => 2500,
+                    'minimum_price' => 1800,
+                    'estimated_minutes' => 60,
+                    'requires_parts' => false,
+                    'warranty_enabled' => false,
+                    'warranty_days' => 0,
+                ],
+
+                [
+                    'name' => 'Samsung KG Unlock',
+                    'description' => 'Remove Samsung Knox Guard lock.',
+                    'default_price' => 1500,
+                    'minimum_price' => 1200,
+                    'estimated_minutes' => 45,
+                    'requires_parts' => false,
+                    'warranty_enabled' => false,
+                    'warranty_days' => 0,
+                ],
+
+                [
+                    'name' => 'MDM Unlock',
+                    'description' => 'Remove MDM lock.',
+                    'default_price' => 1200,
+                    'minimum_price' => 900,
+                    'estimated_minutes' => 45,
+                    'requires_parts' => false,
+                    'warranty_enabled' => false,
+                    'warranty_days' => 0,
+                ],
+
+                [
+                    'name' => 'Network Unlock',
+                    'description' => 'Unlock carrier network restriction.',
+                    'default_price' => 1000,
+                    'minimum_price' => 700,
+                    'estimated_minutes' => 45,
+                    'requires_parts' => false,
+                    'warranty_enabled' => false,
+                    'warranty_days' => 0,
+                ],
+
+                [
+                    'name' => 'iCloud Bypass',
+                    'description' => 'Perform iCloud bypass service.',
+                    'default_price' => 3000,
+                    'minimum_price' => 2500,
+                    'estimated_minutes' => 90,
+                    'requires_parts' => false,
+                    'warranty_enabled' => false,
+                    'warranty_days' => 0,
+                ],
 
             ],
 
             'Cleaning Service' => [
 
-                ['name' => 'Water Damage Cleaning',     'price' => 800,  'minutes' => 45, 'parts' => false],
-                ['name' => 'Internal Cleaning',         'price' => 300,  'minutes' => 20, 'parts' => false],
-                ['name' => 'Motherboard Cleaning',      'price' => 600,  'minutes' => 45, 'parts' => false],
+                [
+                    'name' => 'Water Damage Cleaning',
+                    'description' => 'Clean water damaged device.',
+                    'default_price' => 800,
+                    'minimum_price' => 600,
+                    'estimated_minutes' => 45,
+                    'requires_parts' => false,
+                    'warranty_enabled' => false,
+                    'warranty_days' => 0,
+                ],
+
+                [
+                    'name' => 'Internal Cleaning',
+                    'description' => 'Clean internal dust and dirt.',
+                    'default_price' => 300,
+                    'minimum_price' => 200,
+                    'estimated_minutes' => 20,
+                    'requires_parts' => false,
+                    'warranty_enabled' => false,
+                    'warranty_days' => 0,
+                ],
+
+                [
+                    'name' => 'Motherboard Cleaning',
+                    'description' => 'Clean motherboard corrosion.',
+                    'default_price' => 600,
+                    'minimum_price' => 450,
+                    'estimated_minutes' => 45,
+                    'requires_parts' => false,
+                    'warranty_enabled' => false,
+                    'warranty_days' => 0,
+                ],
 
             ],
 
             'Diagnostic Service' => [
 
-                ['name' => 'Complete Diagnosis',        'price' => 300,  'minutes' => 20, 'parts' => false],
-                ['name' => 'Hardware Diagnosis',        'price' => 250,  'minutes' => 20, 'parts' => false],
-                ['name' => 'Software Diagnosis',        'price' => 250,  'minutes' => 20, 'parts' => false],
-                ['name' => 'Power Consumption Test',    'price' => 400,  'minutes' => 30, 'parts' => false],
+                [
+                    'name' => 'Complete Diagnosis',
+                    'description' => 'Complete hardware and software inspection.',
+                    'default_price' => 300,
+                    'minimum_price' => 200,
+                    'estimated_minutes' => 20,
+                    'requires_parts' => false,
+                    'warranty_enabled' => false,
+                    'warranty_days' => 0,
+                ],
+
+                [
+                    'name' => 'Hardware Diagnosis',
+                    'description' => 'Identify hardware related faults.',
+                    'default_price' => 250,
+                    'minimum_price' => 150,
+                    'estimated_minutes' => 20,
+                    'requires_parts' => false,
+                    'warranty_enabled' => false,
+                    'warranty_days' => 0,
+                ],
+
+                [
+                    'name' => 'Software Diagnosis',
+                    'description' => 'Identify software related faults.',
+                    'default_price' => 250,
+                    'minimum_price' => 150,
+                    'estimated_minutes' => 20,
+                    'requires_parts' => false,
+                    'warranty_enabled' => false,
+                    'warranty_days' => 0,
+                ],
+
+                [
+                    'name' => 'Power Consumption Test',
+                    'description' => 'Measure device power consumption.',
+                    'default_price' => 400,
+                    'minimum_price' => 250,
+                    'estimated_minutes' => 30,
+                    'requires_parts' => false,
+                    'warranty_enabled' => false,
+                    'warranty_days' => 0,
+                ],
 
             ],
 
@@ -81,26 +461,42 @@ class ServiceSeeder extends Seeder
 
             foreach ($items as $service) {
 
+                $slug = Str::slug(
+                    $category . '-' . $service['name']
+                );
+
                 Service::updateOrCreate(
 
                     [
-                        'slug' => Str::slug($service['name']),
+                        'slug' => $slug,
                     ],
 
                     [
-                        'code'               => 'SRV-' . str_pad($counter++, 4, '0', STR_PAD_LEFT),
-                        'category'           => $category,
-                        'name'               => $service['name'],
-                        'slug'               => Str::slug($service['name']),
-                        'description'        => null,
-                        'default_price'      => $service['price'],
-                        'minimum_price'      => 0,
-                        'estimated_minutes'  => $service['minutes'],
-                        'requires_parts'     => $service['parts'],
-                        'warranty_enabled'   => false,
-                        'warranty_days'      => 0,
-                        'status'             => true,
-                        'sort_order'         => 0,
+                        'code' => 'SRV-' . str_pad($counter++, 4, '0', STR_PAD_LEFT),
+
+                        'category' => $category,
+
+                        'name' => $service['name'],
+
+                        'slug' => $slug,
+
+                        'description' => $service['description'],
+
+                        'default_price' => $service['default_price'],
+
+                        'minimum_price' => $service['minimum_price'],
+
+                        'estimated_minutes' => $service['estimated_minutes'],
+
+                        'requires_parts' => $service['requires_parts'],
+
+                        'warranty_enabled' => $service['warranty_enabled'],
+
+                        'warranty_days' => $service['warranty_days'],
+
+                        'status' => true,
+
+                        'sort_order' => 0,
                     ]
 
                 );
