@@ -15,6 +15,7 @@ class DatabaseSeeder extends Seeder
             DeviceTypeSeeder::class,
             BrandSeeder::class,
             DeviceModelSeeder::class,
+            RepairProblemSeeder::class,
         ]);
     }
 }

@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-class DeviceType extends Model
+class RepairProblem extends Model
 {
     use HasFactory, SoftDeletes;
 
@@ -14,6 +14,9 @@ class DeviceType extends Model
      * The attributes that are mass assignable.
      */
     protected $fillable = [
+        'device_type_id',
+        'category',
+        'code',
         'name',
         'slug',
         'description',
@@ -29,18 +32,10 @@ class DeviceType extends Model
     ];
 
     /**
-     * Brands available for this device type.
+     * Device type of this repair problem.
      */
-    public function brands()
+    public function deviceType()
     {
-        return $this->belongsToMany(Brand::class);
-    }
-
-    /**
-     * Repair problems available for this device type.
-     */
-    public function repairProblems()
-    {
-        return $this->hasMany(RepairProblem::class);
+        return $this->belongsTo(DeviceType::class);
     }
 }
