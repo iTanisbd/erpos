@@ -18,7 +18,19 @@ class CustomerFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            'customer_id' => 'CUS-' . fake()->unique()->numerify('######'),
+
+            'name' => fake()->name(),
+
+            'phone' => fake()->numerify('01#########'),
+
+            'email' => fake()->unique()->safeEmail(),
+
+            'address' => fake()->address(),
+
+            'notes' => fake()->optional()->sentence(),
+
+            'status' => true,
         ];
     }
 }

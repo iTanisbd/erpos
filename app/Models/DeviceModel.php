@@ -15,6 +15,7 @@ class DeviceModel extends Model
      */
     protected $fillable = [
         'brand_id',
+        'device_type_id',
         'name',
         'slug',
         'description',
@@ -27,6 +28,7 @@ class DeviceModel extends Model
      */
     protected $casts = [
         'status' => 'boolean',
+        'sort_order' => 'integer',
     ];
 
     /**
@@ -35,5 +37,21 @@ class DeviceModel extends Model
     public function brand()
     {
         return $this->belongsTo(Brand::class);
+    }
+
+    /**
+     * Device type of this device model.
+     */
+    public function deviceType()
+    {
+        return $this->belongsTo(DeviceType::class);
+    }
+
+    /**
+     * Repair tickets using this device model.
+     */
+    public function repairTickets()
+    {
+        return $this->hasMany(RepairTicket::class);
     }
 }

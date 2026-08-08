@@ -26,6 +26,7 @@ class Brand extends Model
      */
     protected $casts = [
         'status' => 'boolean',
+        'sort_order' => 'integer',
     ];
 
     /**
@@ -42,5 +43,13 @@ class Brand extends Model
     public function deviceModels()
     {
         return $this->hasMany(DeviceModel::class);
+    }
+
+    /**
+     * Repair tickets of this brand.
+     */
+    public function repairTickets()
+    {
+        return $this->hasMany(RepairTicket::class);
     }
 }

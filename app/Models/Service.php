@@ -33,14 +33,14 @@ class Service extends Model
      * The attributes that should be cast.
      */
     protected $casts = [
-        'default_price'      => 'decimal:2',
-        'minimum_price'      => 'decimal:2',
-        'estimated_minutes'  => 'integer',
-        'requires_parts'     => 'boolean',
-        'warranty_enabled'   => 'boolean',
-        'warranty_days'      => 'integer',
-        'status'             => 'boolean',
-        'sort_order'         => 'integer',
+        'default_price' => 'decimal:2',
+        'minimum_price' => 'decimal:2',
+        'estimated_minutes' => 'integer',
+        'requires_parts' => 'boolean',
+        'warranty_enabled' => 'boolean',
+        'warranty_days' => 'integer',
+        'status' => 'boolean',
+        'sort_order' => 'integer',
     ];
 
     /**

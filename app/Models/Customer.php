@@ -29,4 +29,12 @@ class Customer extends Model
     protected $casts = [
         'status' => 'boolean',
     ];
+
+    /**
+     * Repair tickets belonging to this customer.
+     */
+    public function repairTickets()
+    {
+        return $this->hasMany(RepairTicket::class);
+    }
 }

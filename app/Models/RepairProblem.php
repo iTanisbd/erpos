@@ -29,6 +29,7 @@ class RepairProblem extends Model
      */
     protected $casts = [
         'status' => 'boolean',
+        'sort_order' => 'integer',
     ];
 
     /**
@@ -37,6 +38,17 @@ class RepairProblem extends Model
     public function deviceType()
     {
         return $this->belongsTo(DeviceType::class);
+    }
+
+    /**
+     * Services that can solve this repair problem.
+     *
+     * Future:
+     * Many-to-Many
+     */
+    public function services()
+    {
+        return $this->belongsToMany(Service::class);
     }
 
     /**

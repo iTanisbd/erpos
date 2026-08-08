@@ -26,6 +26,7 @@ class DeviceType extends Model
      */
     protected $casts = [
         'status' => 'boolean',
+        'sort_order' => 'integer',
     ];
 
     /**
@@ -42,5 +43,13 @@ class DeviceType extends Model
     public function repairProblems()
     {
         return $this->hasMany(RepairProblem::class);
+    }
+
+    /**
+     * Repair tickets of this device type.
+     */
+    public function repairTickets()
+    {
+        return $this->hasMany(RepairTicket::class);
     }
 }

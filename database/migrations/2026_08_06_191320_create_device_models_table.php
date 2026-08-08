@@ -19,6 +19,10 @@ return new class extends Migration
                 ->constrained()
                 ->cascadeOnDelete();
 
+            $table->foreignId('device_type_id')
+                ->constrained()
+                ->cascadeOnDelete();
+
             $table->string('name');
 
             $table->string('slug')->unique();
@@ -32,7 +36,6 @@ return new class extends Migration
             $table->timestamps();
 
             $table->softDeletes();
-
         });
     }
 
